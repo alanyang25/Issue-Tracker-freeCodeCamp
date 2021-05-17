@@ -9,15 +9,15 @@ const IssueSchema = new Schema({
     updated_on: Date,
     assigned_to: String,
     open: Boolean,
-    status_text: String,
+    status_text: String
 });
-const Issue = mongoose.model('Issue', IssueSchema); // Issue model
+const Issue = mongoose.model("Issue", IssueSchema); // Issue model
 
 const ProjectSchema = new Schema({
     name: {type: String, required: true},
     issues: [IssueSchema]
 })
-const Project = mongoose.model('Project', ProjectSchema); // Project model
+const Project = mongoose.model("Project", ProjectSchema); // Project model
 
 exports.Issue = Issue;
 exports.Project = Project;
