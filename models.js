@@ -15,7 +15,7 @@ const Issue = mongoose.model('Issue', IssueSchema); // Issue model
 
 const ProjectSchema = new Schema({
     name: {type: String, required: true},
-    schemas: [IssueSchema]
+    issues: [IssueSchema]
 })
 const Project = mongoose.model('Project', ProjectSchema); // Project model
 
